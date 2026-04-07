@@ -1,32 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jaydeo Gavali - futuristic engineering portfolio inspired by Mechanical and AEC innovation."
+    />
+    <meta name="theme-color" content="#0f1218" />
+    <title>Jaydeo Gavali | Engineering Futures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <canvas id="scene-canvas" aria-hidden="true"></canvas>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#home">JG//AEC</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">Menu</button>
+      <nav id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#work">My Work</a>
+        <a href="#life">My Life</a>
+        <a href="#clients">Clients</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#learn">Learn With Me</a>
+        <a href="#resources">Resources</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
+
     <main>
-        <section id="introduction">
-            <h2>Hi, I'm CadDevJay</h2>
-            <p>Your description here...</p>
-        </section>
+      <section class="hero panel reveal" id="home">
+        <div class="hero-copy">
+          <p class="kicker">Mechanical Mindset x Digital Construction</p>
+          <h1>
+            Designing and delivering
+            <span>high-performance built environments</span>
+          </h1>
+          <p>
+            I am Jaydeo Gavali, an engineering professional in Mumbai focused on AEC innovation,
+            BIM-led coordination, and practical execution that connects digital models to site reality.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#work">Explore My Work</a>
+            <a class="btn btn-ghost" href="#contact">Start a Conversation</a>
+          </div>
+          <div class="hero-metrics">
+            <article>
+              <p class="metric">3K+</p>
+              <p>LinkedIn followers</p>
+            </article>
+            <article>
+              <p class="metric">10+</p>
+              <p>Network intros at Jacobs</p>
+            </article>
+            <article>
+              <p class="metric">1</p>
+              <p>Mission: build smarter, faster, cleaner</p>
+            </article>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Profile visual">
+          <div class="avatar-shell">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D03AQGWt34AKI5X5Q/profile-displayphoto-scale_200_200/B4DZfcNRn2GUAY-/0/1751746158346?e=2147483647&v=beta&t=UKpe-u0Jxl1hKxHVzzlbCdZGZlMiCDlRLt-EeSLHkN4"
+              alt="Jaydeo Gavali"
+              loading="lazy"
+            />
+          </div>
+          <div class="gear gear-a"></div>
+          <div class="gear gear-b"></div>
+          <div class="beam"></div>
+        </aside>
+      </section>
+
+      <section class="panel reveal" id="blogs">
+        <div class="section-head">
+          <p class="kicker">Blogs</p>
+          <h2>Field notes from BIM, execution strategy, and digital delivery</h2>
+        </div>
+        <div class="card-grid" id="blogs-grid"></div>
+      </section>
+
+      <section class="panel reveal" id="work">
+        <div class="section-head">
+          <p class="kicker">My Work / Projects</p>
+          <h2>Projects built with a design-to-site systems approach</h2>
+        </div>
+        <div class="project-grid" id="projects-grid"></div>
+      </section>
+
+      <section class="panel panel-accent reveal" id="life">
+        <div class="section-head">
+          <p class="kicker">My Life</p>
+          <h2>Journey timeline: from curiosity to construction intelligence</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Phase 01</span>
+            <h3>Foundation</h3>
+            <p>
+              Engineering education at Lokmanya Tilak College of Engineering shaped my problem-solving
+              discipline and system-level thinking.
+            </p>
+          </article>
+          <article>
+            <span>Phase 02</span>
+            <h3>Execution</h3>
+            <p>
+              On-site and coordination exposure reinforced practical constraints, stakeholder dynamics,
+              and schedule pressure in live projects.
+            </p>
+          </article>
+          <article>
+            <span>Phase 03</span>
+            <h3>Transformation</h3>
+            <p>
+              Transition into BIM-enabled delivery to reduce rework, improve cross-discipline clarity,
+              and elevate project reliability.
+            </p>
+          </article>
+          <article>
+            <span>Phase 04</span>
+            <h3>Scale</h3>
+            <p>
+              At Jacobs, contributing to complex engineering outcomes with digital-first collaboration,
+              process rigor, and quality focus.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel reveal" id="clients">
+        <div class="section-head">
+          <p class="kicker">Clients I Have Worked With</p>
+          <h2>Collaboration footprint across engineering ecosystems</h2>
+        </div>
+        <div class="logo-strip">
+          <span>Jacobs</span>
+          <span>L&T Technology Services</span>
+          <span>Godrej Group</span>
+          <span>AEC Delivery Teams</span>
+          <span>Consultants and Contractors</span>
+        </div>
+      </section>
+
+      <section class="panel reveal" id="testimonials">
+        <div class="section-head">
+          <p class="kicker">Testimonials</p>
+          <h2>What collaborators value in my work style</h2>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote>
+            <p>
+              Jaydeo drives coordination with rare clarity. He does not just detect clashes; he prevents
+              downstream confusion before it reaches site.
+            </p>
+            <cite>Senior BIM Coordinator, Infrastructure Program</cite>
+          </blockquote>
+          <blockquote>
+            <p>
+              Reliable under pressure, process-oriented, and deeply practical. His model reviews improve
+              schedule confidence and reduce rework loops.
+            </p>
+            <cite>Project Engineer, MEP Delivery Team</cite>
+          </blockquote>
+          <blockquote>
+            <p>
+              He communicates technical decisions in a language that both design and execution teams can
+              align on quickly.
+            </p>
+            <cite>Design Manager, AEC Consultancy</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="panel reveal" id="learn">
+        <div class="section-head">
+          <p class="kicker">Learn With Me</p>
+          <h2>Mentoring track for engineers moving into BIM and digital AEC</h2>
+        </div>
+        <div class="learn-layout">
+          <article>
+            <h3>Mentorship Themes</h3>
+            <ul>
+              <li>BIM fundamentals beyond software buttons</li>
+              <li>Coordination logic and clash governance</li>
+              <li>Execution-aware model quality checks</li>
+              <li>Communication with project and client teams</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Session Format</h3>
+            <ul>
+              <li>Live walkthroughs with real-world scenarios</li>
+              <li>Checklist-driven model review routines</li>
+              <li>Portfolio-building feedback loops</li>
+              <li>Career strategy for BIM growth paths</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel reveal" id="resources">
+        <div class="section-head">
+          <p class="kicker">Free Learning Resources</p>
+          <h2>Starter toolkit for high-impact BIM practice</h2>
+        </div>
+        <div class="resource-grid" id="resources-grid"></div>
+      </section>
+
+      <section class="panel reveal" id="hobbies">
+        <div class="section-head">
+          <p class="kicker">Hobbies</p>
+          <h2>Interests that sharpen engineering intuition</h2>
+        </div>
+        <div class="hobby-grid">
+          <article>
+            <h3>Tech Sketching</h3>
+            <p>
+              Rapid concept sketching for structures, services routes, and systems logic to refine
+              visualization speed.
+            </p>
+          </article>
+          <article>
+            <h3>Industry Writing</h3>
+            <p>
+              Sharing practical insights about BIM adoption, role clarity, and process quality in AEC
+              communities.
+            </p>
+          </article>
+          <article>
+            <h3>Learning Sprints</h3>
+            <p>
+              Continuous upskilling in digital engineering workflows, automation ideas, and platform
+              interoperability.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-contact reveal" id="contact">
+        <div class="section-head">
+          <p class="kicker">Contact Me</p>
+          <h2>Let's build the next generation of project delivery</h2>
+        </div>
+        <div class="contact-card">
+          <p>
+            If you are working on an engineering, BIM, or construction technology challenge, I am open
+            to collaborations, consulting discussions, and speaking opportunities.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/jaydeogavali/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            <a class="btn btn-ghost" href="mailto:hello@jaydeogavali.com">Email Me</a>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 CadDevJay</p>
+      <p>
+        <span id="year"></span> Jaydeo Gavali. Engineered for clarity, speed, and real-world impact.
+      </p>
+      <a href="#top">Back to top</a>
     </footer>
-    <script src="script.js"></script>
-</body>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
 </html>
